@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/gilroy-Regular');
+@import url('https://fonts.cdnfonts.com/css/Gilroy-Bold');
+
+* {
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(18, 18, 18, 1);
+}
+ li, a {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header{
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+  background-color: rgba(18, 18, 18, 1);
+  border-bottom: 3px solid #D4B871;  
+  z-index: 1000;
+}
+
+.logo{
+    object-fit:cover;
+    cursor: pointer;
+    padding-right: 40px;
+    margin-left: -55px;
+}
+
+.nav-links{
+  list-style: none;
+}
+
+.nav-links li{
+  display: inline-block;
+  padding: 16px;
+}
+
+.nav-links li a{
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover{
+  color: #D4B871;
+}
+.nav-links li a:active{
+  color: #f4c756;
+
+}
+
+/*.video-footage{
+  padding-bottom: 100px;
+}*/
+/*Services section*/
+.video-footage {
+  width: 100;
+  transform: scale(1,1);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-footage .hero-video{
+  width: 100%;
+}
+
+
+/*Our history section*/
+.Our-History img{
+  width: 100%;
+  height: auto;
+}
+/*Our-partners section*/
+.Our-partners{
+  background-image: url('images/Group.png');
+  background-color: #fff;
+  opacity: 0.9;
+  padding: 10px 10%;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+}
+.Our-partners-items{
+  background-color: #d4b87100;
+  display: flex;
+  align-content: flex-start;
+  margin-top: 60px;
+  margin-left: -70px;
+  flex-grow: 8;
+  
+}
+
+.Our-partners-items .vector{
+  width: 10%;
+  height: 98.5px;
+  background-color: #d4b87100;
+}
+
+.Our-partners-items h2{
+  font-family: "Oswald";
+  text-transform: uppercase;
+  color: rgba(18, 18, 18, 1);
+  font-size: 50px;
+  align-self: center;
+  background-color: #d4b87100;
+  margin-left: -10px;
+}
+
+.Our-partners-description {
+  background-color: #d4b87100;
+  width: fit-content;
+  padding: 20px;
+}
+
+.Our-partners-description p{
+  background-color: #d4b87100;
+  color: rgba(18, 18, 18, 1);
+  font-family: Calibri;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 44.8px;
+  text-align: left;
+  padding: 45px;
+}
+
+.Our-partners-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: scroll;
+}
+
+.Our-partners-slider::-webkit-scrollbar{
+  display: none;
+}
+
+.slider-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10% auto;
+  background: transparent;
+  width: 100%;
+  height: auto;
+
+}
+
+#backBtn , #nextBtn{
+  width: 50px;
+  cursor: pointer;
+  margin: 40px;
+}
+.partners-logos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 10px;
+  justify-content: center;
+  flex: none;
+}
+
+.partners-logos img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: tranform 0.7s;
+}
+
+.partners-logos img:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+
+}
+
+.Our-partners-slider :where(.partners-logos img) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partners-logos {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 4) - 12px);
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 80%;
+  background: transparent;
+  cursor: pointer;
+  
+}
+
+.partners-logos img {
+  margin: 0 10px;
+  width: 100%;
+  height: auto;
+  background: transparent;
+  padding: 10px;
+}
+/*About Us Section*/
+.About-Us{
+  background-image: url('images/Frame 39944.png');
+  padding: 10px 10%;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+}
+
+.About-Us-items{
+  background-color: #d4b87100;
+  display: flex;
+  align-content: flex-start;
+  margin-top: 60px;
+  margin-left: -70px;
+  flex-grow: 8;
+}
+
+
+.About-Us-items .vector{
+  width: 10%;
+  height: 98.5px;
+  background-color: #d4b87100;
+}
+
+.About-Us-items h2{
+  font-family: "Oswald";
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 50px;
+  align-self: center;
+  background-color: #d4b87100;
+  margin-left: -10px;
+}
+
+.About-Us-description {
+  background-color: #d4b87100;
+  width: fit-content;
+  padding: 20px;
+}
+.About-Us-description p{
+  background-color: #d4b87100;
+  color: #fff;
+  font-family: Calibri;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 36.8px;
+  text-align: left;
+  padding: 20px;
+  text-align: justify;
+}
+
+.About-Us-logo{
+  background-color: #d4b87100;
+  background: transparent;
+  margin-bottom: 50px;
+}
+
+.About-Us-logo img{
+  background: transparent;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
+
+/*footer section*/
+.footer {
+  background-image: url('images/footerbg.png');
+  padding: 10px 10%;
+  border-bottom: 26px solid #D4B871;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+}
+
+.container{
+  display: flex;
+  background-color: #d4b87100;
+}
+
+.Contact-Us-items{
+  display: flex;
+  align-content: flex-start;
+  margin-top: 60px;
+  margin-left: -70px;
+  flex-grow: 8;
+  background-color: #d4b87100;
+}
+.Contact-Us-items .vector{
+  width: 10%;
+  height: 98.5px;
+  background-color: #d4b87100;
+}
+.Contact-Us-items h2{
+  font-family: "Oswald";
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 50px;
+  align-self: center;
+  background-color: #d4b87100;
+  margin-left: -10px;
+}
+
+.sub-footer{
+  display: flex;
+  gap: 12rem;
+  background-color: #d4b87100;
+  margin-bottom: 100px;
+  align-items:center;
+  justify-content: center;
+  margin-top: 20px;
+  
+}
+.Address-items{
+  width: max-content;
+  height: max-content;
+  background-color: #d4b87100;
+  
+}
+
+.Address-items .headings{
+  font-family:"Gilroy-Bold", sans-serif;
+  font-size: 30px;
+  color: #fff;
+  background-color: #d4b87100;
+  margin-bottom: 20px;
+}
+
+.Address-items .Liner{
+  font-family:"Gilroy-Light", sans-serif;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 20px;
+  color: #fff;
+  background-color: #d4b87100;
+  width: 380px;
+  margin-bottom: 30px;
+}
+
+.Address-items .Phone-No{
+  font-family:"Gilroy-Bold", sans-serif;
+  font-size: 30px;
+  color: #fff;
+  background-color: #d4b87100;
+  margin-bottom: 20px;
+  margin-top: 85px;
+}
+
+.Phone-No-items{
+  font-family:"Gilroy-Light", sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  color: #fff;
+  background-color: #d4b87100;
+  width: 380px;
+  margin-bottom: 30px;
+}
+.Maps{
+  width: max-content;
+  height: max-content;
+  background-color: #d4b87100;
+  
+}
+
+.Maps .headings{
+  font-family:"Gilroy-Bold", sans-serif;
+  font-size: 30px;
+  text-decoration: underline;
+  color: #fff;
+  background-color: #d4b87100;
+  margin-bottom: 30px;
+}
+
+.Maps .Maps-items{
+  background-color:#d4b87100;
+}
+
+.social-links {
+  width: max-content;
+  display: flex;
+  row-gap: 1.5rem;
+  height: max-content;
+  background-color:#d4b87100;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links .headings {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 30px;
+  color: #fff;
+  background-color:#d4b87100;
+  
+  width: max-content;
+}
+.social-links a{
+  background-color: #d4b87100;
+}
+
+.social-links .social-logo {
+  background-color:#d4b87100;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: opacity 0.5s;
+  margin-bottom: 20px; 
+}
+
+.social-links .social-logo:hover {
+  opacity: 0.5;
+}

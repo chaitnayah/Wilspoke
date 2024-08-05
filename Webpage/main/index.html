@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wilspoke</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/logo.svg" alt="Wilspoke">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Our-History">Our History</a></li>
+                <li><a href="#Testimonials">Testimonials</a></li>
+                <li><a href="#Our-partners">Our Partners</a></li>
+                <li><a href="#About-Us">About Us</a></li>
+                <li><a href="#footer">Contact Us</a></li>
+            </ul>
+        </nav> 
+    </header>
+    <section class="video-footage">
+                <video class="hero-video"  autoplay loop muted playsinline>
+                    <source src="video/Wilspoke Sports & Entertainment 01.mp4" type="video/mp4">
+                  </video>
+    </section>
+    <section class="Services">
+
+    </section>
+    <section class="Our-History">
+        <img src="images/Our-history.svg" alt="Our-history">
+    </section>
+
+    <section class="Testimonials"></section>
+    <section class="Our-partners">
+        <div class="Our-partners-items">
+            <img class = "vector"src="images/contact.svg">
+                <h2>Our Partners</h2>
+        </div>
+        <div class="Our-partners-description">
+            <p>“Our Vision At Wilspoke is to be a leading force in </p>
+        </div>
+        <div class="slider-wrap">
+            <img src ="images/Back-Button.png" id="backBtn">
+            <div class="Our-partners-slider">
+                <div class="partners-logos">
+                    <img src="images/dream11.png" alt="Dream11">
+                    <img src="images/puma.png" alt="Puma">
+                    <img src="images/muscleblaze.png" alt="MuscleBlaze">
+                    <img src="images/fancode.png" alt="FanCode">
+                </div>
+            </div>
+            <img src="images/Next-Button.png" id="nextBtn">
+        </div>
+        
+    </section>
+    <section class="About-Us">
+        <div class="About-Us-items">
+            <img class = "vector"src="images/contact.svg">
+                <h2>About Us</h2>
+        </div>
+        <div class="About-Us-description">
+            <p>Welcome to Wilspoke, the top spot for sports events and entertainment. Specializing in creating dynamic and captivating events tailored for corporate clients, associations, schools, and colleges, we aim not only to provide unforgettable experiences but also to nurture the growth of the sports community. </p>
+            <p>Our team of skilled professionals brings creativity, innovation, and a profound understanding of sports culture to every project. In addition to event planning, Wilspoke is committed to supporting the sports community through various initiatives such as talent development programs, sports workshops, and community outreach. With a range of tournaments and leagues available, there's something for everyone. Let's join forces to craft the ultimate sports experience!</p>
+        </div>
+        <div class="About-Us-logo">
+            <img src="images/Group 39988.png" alt="Wilspoke">
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class = "Contact-Us-items">
+                <img class = "vector"src="images/contact.svg">
+                <h2>Contact Us</h2>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <div class="Address-items">
+                <p class="headings">Address:</p>
+                <p class="Liner"> B-45, Anugraha Layout, Hoodi- Kodigehalli
+                    Main Road, Hoodi, Bangalore - 48</p>
+                <p class="Phone-No">Phone Number:</p>
+                <p class="Phone-No-items">+919113001057</p>
+            </div>
+            <div class="Maps">
+                <p class="headings">Location:</p>
+                <p class="Maps-items">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.393653054474!2d77.72091690128434!3d13.002567046731244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11b8a37c6791%3A0xf7ac8a5fe9a9bb02!2sAnugraha%20Layout!5e0!3m2!1sen!2sin!4v1722588558556!5m2!1sen!2sin" width="424" height="295" style="border-radius: 39.25px; " allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </p>
+            </div>
+            <div class="social-links">
+                <p class="headings">Follow Us</p>
+                <a href="#">
+                    <img class="social-logo" src="images/instagram.svg" alt="Instagram">
+                </a>
+                <a href="#">
+                    <img class="social-logo" src="images/meta.svg" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img class="social-logo" src="images/youtube.svg" alt="YouTube">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let scrollContainer = document.querySelector("Our-partners-slider");
+        let backBtn = document.getElementById("backBtn");
+        let nextBtn = document.getElementById("nextBtn");
+
+        scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+        });
+
+        nextBtn.addEventListener("click", ()=>{
+            scrollContainer.scrollLeft += 900;
+        });
+
+        backBtn.addEventListener("click", ()=>{
+            scrollContainer.scrollLeft -= 900;
+        });
+    </script>
+</body>
+</html>
