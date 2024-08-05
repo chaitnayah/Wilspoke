@@ -60,7 +60,7 @@ header{
 /*.video-footage{
   padding-bottom: 100px;
 }*/
-/*Services section*/
+
 .video-footage {
   width: 100;
   transform: scale(1,1);
@@ -74,18 +74,151 @@ header{
   width: 100%;
 }
 
-
 /*Our history section*/
 .Our-History img{
   width: 100%;
-  height: auto;
+  height: fit-content;
 }
+
+
+/*Services section*/
+.Services{
+  background-image: url('images/Group.png');
+  background-color: #fff;
+  padding: 20px 10%;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+}
+
+.Services-items{
+  background-color: #d4b87100;
+  display: flex;
+  align-content: flex-start;
+  margin-top: 60px;
+  margin-left: -70px;
+  flex-grow: 8;
+  
+}
+
+.Services .vector{
+  width: 10%;
+  height: 98.5px;
+  background-color: #d4b87100;
+}
+.Services-items h2{
+  font-family: "Oswald";
+  text-transform: uppercase;
+  color: rgba(18, 18, 18, 1);
+  font-size: 70px;
+  align-self: center;
+  background-color: #d4b87100;
+  margin-left: -10px;
+}
+
+.Services-description {
+  background-color: #d4b87100;
+  width: fit-content;
+  padding: 20px;
+}
+
+.Services-description p{
+  background-color: #d4b87100;
+  color: rgba(18, 18, 18, 1);
+  font-family: Calibri;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: left;
+  padding: 0px;
+  margin-left: 70px;
+}
+
+.services-wrapper{
+  background: transparent;
+  max-width: 2612px;
+  height: 607.15px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 35px;
+  margin-top: 50px;
+  cursor: pointer;
+
+}
+
+.services-wrapper .services-carousel{
+  background: transparent;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.services-carousel :where(.services-card, .services-img){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.services-carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.services-carousel.dragging{
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.services-carousel.dragging .services-card{
+  cursor: grab;
+  user-select: none;
+}
+.services-carousel .services-card{
+  scroll-snap-align: start;
+  list-style: none;
+  height: 607.15px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 15px;
+  
+}
+
+.services-card .services-img{
+  background: transparent;
+}
+.services-card .services-img img{
+  background: transparent;
+  width: 520.53px;
+  height: 607.18px;
+  object-fit: cover; 
+}
+
+@media screen and (max-width: 900px){
+  .services-wrapper .services-carousel {
+    grid-auto-columns: calc((100% / 3) - 12px);
+  }
+}
+
+@media screen and (max-width: 600px){
+  .services-wrapper .services-carousel {
+    grid-auto-columns: 100px;
+  }
+}
+
 /*Our-partners section*/
 .Our-partners{
   background-image: url('images/Group.png');
   background-color: #fff;
-  opacity: 0.9;
-  padding: 10px 10%;
+  padding: 20px 10%;
   justify-content: center;
   height: max-content;
   width: 100%;
@@ -110,7 +243,7 @@ header{
   font-family: "Oswald";
   text-transform: uppercase;
   color: rgba(18, 18, 18, 1);
-  font-size: 50px;
+  font-size: 70px;
   align-self: center;
   background-color: #d4b87100;
   margin-left: -10px;
@@ -133,86 +266,104 @@ header{
   padding: 45px;
 }
 
-.Our-partners-slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.wrapper{
   background: transparent;
+  max-width: 1517px;
   width: 100%;
-  margin-top: 20px;
-  overflow-x: scroll;
-}
-
-.Our-partners-slider::-webkit-scrollbar{
-  display: none;
-}
-
-.slider-wrap{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10% auto;
-  background: transparent;
-  width: 100%;
-  height: auto;
+  position: relative;
+  margin-bottom: 100px;
+  margin-top: 150px;
 
 }
 
-#backBtn , #nextBtn{
+.wrapper i {
+  height: 50px;
   width: 50px;
+  background :#D4B871 ;
+  text-align: center;
+  line-height: 50px;
   cursor: pointer;
-  margin: 40px;
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  font-size: 1.25rem;
+  transform: translateY(-50%);
 }
-.partners-logos {
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 20px;
-  padding: 10px;
-  justify-content: center;
-  flex: none;
+.wrapper i:first-child{
+  left: -130px;
 }
 
-.partners-logos img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  transition: tranform 0.7s;
+.wrapper i:last-child{
+  right: -130px;
 }
 
-.partners-logos img:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-
-}
-
-.Our-partners-slider :where(.partners-logos img) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.partners-logos {
+.wrapper .carousel{
+  background: transparent;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 4) - 12px);
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  width: 80%;
-  background: transparent;
-  cursor: pointer;
-  
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
-.partners-logos img {
-  margin: 0 10px;
-  width: 100%;
-  height: auto;
-  background: transparent;
-  padding: 10px;
+.carousel :where(.card, .img){
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging{
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .card{
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel .card{
+  scroll-snap-align: start;
+  list-style: none;
+  height: 342px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 15px;
+  
+}
+.card .img{
+  background: transparent;
+}
+.card .img img{
+  background: transparent;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 900px){
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 4) - 12px);
+  }
+}
+
+@media screen and (max-width: 600px){
+  .wrapper .carousel {
+    grid-auto-columns: 100px;
+  }
+}
+
 /*About Us Section*/
 .About-Us{
   background-image: url('images/Frame 39944.png');
@@ -242,7 +393,7 @@ header{
   font-family: "Oswald";
   text-transform: uppercase;
   color: #fff;
-  font-size: 50px;
+  font-size: 70px;
   align-self: center;
   background-color: #d4b87100;
   margin-left: -10px;
@@ -312,7 +463,7 @@ header{
   font-family: "Oswald";
   text-transform: uppercase;
   color: #fff;
-  font-size: 50px;
+  font-size: 70px;
   align-self: center;
   background-color: #d4b87100;
   margin-left: -10px;
