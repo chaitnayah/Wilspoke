@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wilspoke</title>
+    <script src="https://kit.fontawesome.com/03fe4ee7b0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="script.js" defer></script>
+    
 </head>
 <body>
     <header>
@@ -27,13 +29,47 @@
                   </video>
     </section>
     <section class="Services">
-
+        <div class="Services-items">
+            <img class = "vector"src="images/contact.svg">
+                <h2>Services</h2>
+        </div>
+        <div class="Services-description">
+            <p>Our team of skilled professionals brings creativity, innovation, and a profound understanding
+                of sports culture to every project. In addition to event planning,</p>
+        </div>
+        <div class="services-wrapper">
+            
+            <ul class="services-carousel">
+                
+                <li class = "services-card">
+                    <div class="services-img"><img src="images/servics/brand promotion.png" alt="brand promotion" draggable="false"></div>
+                </li>
+                <li class = "services-card">
+                    <div class="services-img"><img src="images/servics/Event marketing.png" alt="Event marketing" draggable="false"></div>
+                </li>
+                <li class = "services-card">
+                    <div class="services-img"><img src="images/servics/sports community bulding.png" alt="sports community bulding" draggable="false"></div>
+                </li>
+                <li class = "services-card">
+                    <div class="services-img"><img src="images/servics/event.png" alt="Event marketing" draggable="false"></div>
+                </li>
+                <li class = "services-card">
+                    <div class="services-img"><img src="images/servics/athlete.png" alt="athlete" draggable="false"></div>
+                </li>
+                <li class = "services-card">
+                    <div class="services-img"><img src="images/servics/club & team management.png" alt="club & team management" draggable="false"></div>
+                </li>
+            </ul>
+        </div>  
+         
     </section>
     <section class="Our-History">
         <img src="images/Our-history.svg" alt="Our-history">
     </section>
 
-    <section class="Testimonials"></section>
+    <section class="Testimonials">
+
+    </section>
     <section class="Our-partners">
         <div class="Our-partners-items">
             <img class = "vector"src="images/contact.svg">
@@ -42,19 +78,24 @@
         <div class="Our-partners-description">
             <p>“Our Vision At Wilspoke is to be a leading force in </p>
         </div>
-        <div class="slider-wrap">
-            <img src ="images/Back-Button.png" id="backBtn">
-            <div class="Our-partners-slider">
-                <div class="partners-logos">
-                    <img src="images/dream11.png" alt="Dream11">
-                    <img src="images/puma.png" alt="Puma">
-                    <img src="images/muscleblaze.png" alt="MuscleBlaze">
-                    <img src="images/fancode.png" alt="FanCode">
-                </div>
-            </div>
-            <img src="images/Next-Button.png" id="nextBtn">
-        </div>
-        
+        <div class="wrapper">
+            <i id="left" class="fa fa-angle-left" aria-hidden="true"></i>
+            <ul class="carousel">
+                <li class = "card">
+                    <div class="img"><img src="images/dream11.png" alt="Dream11" draggable="false"></div>
+                </li>
+                <li class = "card">
+                    <div class="img"><img src="images/puma.png" alt="Puma" draggable="false"></div>
+                </li>
+                <li class = "card">
+                    <div class="img"><img src="images/muscleblaze.png" alt="MuscleBlaze" draggable="false"></div>
+                </li>
+                <li class = "card">
+                    <div class="img"><img src="images/fancode.png" alt="Fancode" draggable="false"></div>
+                </li>
+            </ul>
+            <i id="right" class="fa-solid fa-angle-right" aria-hidden="true"></i>
+        </div>    
     </section>
     <section class="About-Us">
         <div class="About-Us-items">
@@ -104,23 +145,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        let scrollContainer = document.querySelector("Our-partners-slider");
-        let backBtn = document.getElementById("backBtn");
-        let nextBtn = document.getElementById("nextBtn");
-
-        scrollContainer.addEventListener("wheel", (evt) => {
-            evt.preventDefault();
-            scrollContainer.scrollLeft += evt.deltaY;
-        });
-
-        nextBtn.addEventListener("click", ()=>{
-            scrollContainer.scrollLeft += 900;
-        });
-
-        backBtn.addEventListener("click", ()=>{
-            scrollContainer.scrollLeft -= 900;
-        });
-    </script>
+    <script src="services.js" defer></script> 
 </body>
 </html>
