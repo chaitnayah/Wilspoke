@@ -23,7 +23,7 @@
         </nav> 
     </header>
     <section class="video-footage">
-                <video class="hero-video"  autoplay loop muted>
+                <video id = "hero-video-id" class="hero-video">
                     <source src="video/Wilspoke Sports & Entertainment 01.mp4" type="video/mp4">
                   </video>
     </section>
@@ -197,5 +197,28 @@
             });
     </script>
     <script src="testimonial.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('hero-video-id');
+            video.muted = true; // Start muted to allow autoplay
+        
+            const playVideoWithSound = () => {
+                video.muted = false;
+                video.play().catch(error => {
+                    console.log('Error trying to play video:', error);
+                });
+            };
+        
+            document.addEventListener('click', () => {
+                playVideoWithSound();
+            }, { once: true }); // Play video with sound only once on first user interaction
+        
+            video.addEventListener('ended', () => {
+                video.muted = true; // Mute the video again after the first play
+                video.currentTime = 0; 
+                video.play();
+            });
+        });
+        </script>
 </body>
 </html>
