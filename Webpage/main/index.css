@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
-@import url('https://fonts.cdnfonts.com/css/gilroy-Regular');
-@import url('https://fonts.cdnfonts.com/css/Gilroy-Bold');
 
 * {
   box-sizing: border-box;
@@ -8,6 +6,7 @@
   margin: 0;
   padding: 0;
   background-color: rgba(18, 18, 18, 1);
+  scroll-behavior: smooth;
 }
  li, a {
   font-family: "Oswald", sans-serif;
@@ -74,7 +73,7 @@ header{
   width: 100%;
 }
 
-/*Our history section*/
+
 .Our-History img{
   width: 100%;
   height: fit-content;
@@ -87,7 +86,7 @@ header{
   background-color: #fff;
   padding: 20px 10%;
   justify-content: center;
-  height: max-content;
+  max-height: 1080px;
   width: 100%;
 }
 
@@ -136,13 +135,14 @@ header{
 
 .services-wrapper{
   background: transparent;
-  max-width: 2612px;
-  height: 607.15px;
+  max-width: 100%;
+  height: auto;
   width: 100%;
   position: relative;
   margin-bottom: 35px;
   margin-top: 50px;
   cursor: pointer;
+  overflow: hidden;
 
 }
 
@@ -151,11 +151,14 @@ header{
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 3) - 12px);
-  gap: 2rem;
+  gap: 40px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
+}
+.services-carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .services-carousel :where(.services-card, .services-img){
@@ -182,7 +185,7 @@ header{
 .services-carousel .services-card{
   scroll-snap-align: start;
   list-style: none;
-  height: 607.15px;
+  height: auto;
   background: transparent;
   display: flex;
   align-items: center;
@@ -197,24 +200,192 @@ header{
 }
 .services-card .services-img img{
   background: transparent;
-  width: 520.53px;
-  height: 607.18px;
+  width:  422.53px;
+  height: auto;
   object-fit: cover; 
 }
 
 @media screen and (max-width: 900px){
   .services-wrapper .services-carousel {
     grid-auto-columns: calc((100% / 3) - 12px);
+   
+    
   }
 }
 
 @media screen and (max-width: 600px){
   .services-wrapper .services-carousel {
     grid-auto-columns: 100px;
+   
   }
 }
 
-/*Our-partners section*/
+
+/*Testimonials*/
+.Testimonials{
+  background-image: url('images/Group.png');
+  background-color: #fff;
+  padding: 20px 10%;
+  justify-content: center;
+  max-height: 1080px;
+  width: 100%;
+}
+
+.Testimonials-items{
+  background-color: #d4b87100;
+  display: flex;
+  align-content: flex-start;
+  margin-top: 60px;
+  margin-left: -70px;
+  flex-grow: 8;
+}
+
+.Testimonials-items .vector{
+  width: 10%;
+  height: 98.5px;
+  background-color: #d4b87100;
+}
+
+.Testimonials-items h2{
+  font-family: "Oswald";
+  text-transform: uppercase;
+  color: rgba(18, 18, 18, 1);
+  font-size: 70px;
+  align-self: center;
+  background-color: #d4b87100;
+  margin-left: -10px;
+}
+
+.Testimonials-description {
+  background-color: #d4b87100;
+  width: fit-content;
+  padding: auto;
+  text-align: center;
+}
+
+.Testimonials-description p{
+  background-color: #d4b87100;
+  color: rgba(18, 18, 18, 1);
+  font-family: Calibri;
+  font-size: 50px;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 80px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.testimonial-wrapper{
+  display: flex;
+  background: transparent;
+  height: auto;
+  width: 100%;
+  position: relative;
+  margin-bottom: 35px;
+  margin-top: 50px;
+  cursor: pointer;
+  overflow: hidden;
+
+}
+
+.testimonial-wrapper .testimonial-carousel{
+  background: transparent;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  gap: 8rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.testimonial-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-carousel :where(.testimonial-card, .testimonial-img){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.testimonial-carousel.dragging{
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.testimonial-carousel.dragging .testimonial-card{
+  cursor: grab;
+  user-select: none;
+}
+.testimonial-carousel .testimonial-card{
+    scroll-snap-align: start;
+    width: 500px;
+    height: 582px;
+    list-style: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom : 15px;
+    background-color: rgb(255, 255, 255);
+    border: solid;
+    border-radius: 30.09px;
+    border-color: rgba(128, 128, 128, 0.209);
+  
+}
+
+.testimonial-card .testimonial-img{
+  background: transparent;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-card .testimonial-img img{
+  background: transparent;
+  width:  188.96px;
+  height: 188.96px;
+  align-items: center;
+  object-fit: cover; 
+  border-radius: 50%;
+  border: solid;
+  border-color:  rgba(128, 128, 128, 0.209);
+}
+.testimonial-card .vector1{
+  background: transparent;
+  size: 20px;
+  
+}
+
+.testimonial-card span{
+  font-family:  Calibri;
+  font-size: 18px;
+  text-transform: capitalize;
+  background: transparent;
+  color: black;
+  text-align: center;
+  line-height: 25.2px;
+  padding: 40px;
+}
+
+@media screen and (max-width: 900px){
+  .testimonial-wrapper .testimonial-carousel {
+     grid-auto-columns: calc((100% / 2) - 12px);  
+  }
+}
+
+@media screen and (max-width: 600px){
+  .testimonial-wrapper .testimonial-carousel {
+    grid-auto-columns: 100px; 
+  }
+}
+
+/*Our-partners-section*/
+
 .Our-partners{
   background-image: url('images/Group.png');
   background-color: #fff;
@@ -350,6 +521,10 @@ header{
   height: 250px;
   object-fit: cover;
   border-radius: 50%;
+  border: solid;
+  border-color: #D4B871;
+  transition: 0.5ms;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 900px){
@@ -363,13 +538,12 @@ header{
     grid-auto-columns: 100px;
   }
 }
-
 /*About Us Section*/
 .About-Us{
   background-image: url('images/Frame 39944.png');
   padding: 10px 10%;
   justify-content: center;
-  height: max-content;
+  max-height: 1080px;
   width: 100%;
 }
 
@@ -408,7 +582,7 @@ header{
   background-color: #d4b87100;
   color: #fff;
   font-family: Calibri;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 300;
   line-height: 36.8px;
   text-align: left;
